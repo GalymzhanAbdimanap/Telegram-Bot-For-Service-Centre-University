@@ -9,7 +9,7 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters       
 bot = telebot.TeleBot(config.token)                                                     #создаем переменную бот через токен который в файле конфиг
 updater = Updater('762592341:AAHabfkeSv6y5GUYhuDbZraQd8LYuSV6tIU')                      #создаем апдейтер нужная переменная 
 dispatcher = updater.dispatcher                                                         #создаем диспатчер чтобы длбавлять команды
-connection = sqlite3.connect('mysql://ba06a20ae318a4:6ebae854@eu-cdbr-west-02.cleardb.net/heroku_f113f4491893ba8?reconnect=true',check_same_thread=False)                        #подключаемся к нашей базе данных
+connection = sqlite3.connect('order.db',check_same_thread=False)                        #подключаемся к нашей базе данных
 
 data1=[]                                                                                #наш главный массив где будем сохранять текущие данные
 function = 0                                                                            #переменная где будет хранится текущая функция
